@@ -7,19 +7,44 @@
 int main()
 {
 	// variable declarations
-			
+	int ch, done;	
 	/* main program loop */
 	done = FALSE;
+
 	while(!done)
 	{
-		// prompt for input
-		// process input
-		// if R is input, output "move right"
-		// if L is input, output "move left"
-		// if B is input, output "move back"
-		// if Q is input, break the loop
-		// if H or ? is input, output valid commands
-		// identify invalid input
+		
+		printf("command \n");
+			getchar(ch);
+		swith(ch){
+			case'R':
+			case'r':
+			puts("Move right");
+			break;
+
+			case'L':
+			case'l':
+			puts("Move left");
+			break;
+
+			case'B':
+			case'b':
+			puts("Move back");
+			break;
+
+			case'Q':
+			case'q':
+			puts("");
+		        done  = true;
+			break;
+
+			case'H':
+			case'h':
+			case'?':
+			puts("I dont know that command ");
+			puts("Move(R)right, Move (L)left, Move (B)back.");
+			break;
+		}
 	}
 
 	return 0;
